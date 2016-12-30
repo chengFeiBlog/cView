@@ -1,0 +1,14 @@
+.clearfix() {
+    zoom: 1; /*缩放比例设置为1,这是针对于IE6的，因为IE6不支持:after伪类，这个神奇的zoom:1让IE6的元素可以清除浮动来包裹内部元素。*/
+    &:before,
+    &:after {
+        content: ''; /*内容为空*/
+        display: table; /*此元素会作为块级表格来显示（类似 <table>），表格前后带有换行符*/
+    }
+    &:after {
+        clear: both; /*清除左右的浮动*/
+        visibility: hidden; /*可见度设为隐藏*/
+        font-size: 0;
+        height: 0;
+    }
+}

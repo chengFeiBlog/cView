@@ -16,6 +16,8 @@
     "vue": "^2.1.0"
   },
   "devDependencies": {
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "autoprefixer": "^6.4.0",
     "babel-core": "^6.0.0",
     "babel-eslint": "^7.0.0",

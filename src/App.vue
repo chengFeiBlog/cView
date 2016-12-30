@@ -1,28 +1,32 @@
 <template>
     <div id="app">
-        <img src="./assets/logo.png">
-        <hello></hello>
+        <h1>一栅格</h1>
+        <Row :gutter="20" type="flex">
+            <cv-col :lg="4" class="col"> col</cv-col>
+            <cv-col :lg="4" class="col"> col</cv-col>
+            <cv-col :lg="4" class="col"> col</cv-col>
+            <cv-col :lg="4" class="col"> col</cv-col>
+            <cv-col :lg="4" class="col"> col</cv-col>
+            <cv-col :lg="4" class="col"> col</cv-col>
+        </Row>
+
     </div>
 </template>
 
 <script type="text/ecmascript-6">
-	import Hello from './components/Hello'
-
+	import {Row, CvCol} from './components/layout'
 	export default {
 		name: 'app',
 		components: {
-			Hello
+			Row, CvCol
 		}
 	}
 </script>
 
-<style>
-    #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
+<style lang="less">
+    @import "styles/index.less";
+
+    .col {
+        border: solid #2db7f5 1px;
     }
 </style>
