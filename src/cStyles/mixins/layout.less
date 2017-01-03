@@ -1,8 +1,6 @@
-// 行
 @row-prefix-cls: ~"@{css-prefix}row";
-// 列
 @col-prefix-cls: ~"@{css-prefix}col";
-// 栅格间距
+// 生成row的属性，每行加上浮动清除
 .make-row(@gutter: @grid-gutter-width) {
     position: relative;
     margin-left: (@gutter / -2);
@@ -10,13 +8,14 @@
     height: auto;
     .clearfix;
 }
+// 递归生成col属性
 .float-grid-columns(@class) {
     .col(@index) { // initial
         @item: ~".@{col-prefix-cls}-span@{class}-@{index}";
         .col((@index + 1), @item);
     }
-    .col(@index, @list) when (@index =< @grid-columns) {
-        @item: ~"@{col-prefix-cls}-span@{calss}-@{index}";
+    .col(@index, @list) when (@index =< @grid-columns) { // general
+        @item: ~".@{col-prefix-cls}-span@{class}-@{index}";
         .col((@index + 1), ~"@{list}, @{item}");
     }
     .col(@index, @list) when (@index > @grid-columns) { // terminal
@@ -25,9 +24,9 @@
             flex: 0 0 auto;
         }
     }
-    .col(1);
+    .col(1); // kickstart it
 }
-
+// 递归生成
 .loop-grid-columns(@index, @class) when (@index > 0) {
     .@{col-prefix-cls}-span@{class}-@{index} {
         display: block;

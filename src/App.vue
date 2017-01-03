@@ -1,13 +1,13 @@
 <template>
     <div id="app">
         <h1>一栅格</h1>
-        <Row :gutter="20" type="flex">
-            <cv-col :lg="4" class="col"> col</cv-col>
-            <cv-col :lg="4" class="col"> col</cv-col>
-            <cv-col :lg="4" class="col"> col</cv-col>
-            <cv-col :lg="4" class="col"> col</cv-col>
-            <cv-col :lg="4" class="col"> col</cv-col>
-            <cv-col :lg="4" class="col"> col</cv-col>
+        <Row :gutter="20">
+            <cv-col :span="4" class="col"> col</cv-col>
+            <cv-col :span="4" class="col"> col</cv-col>
+            <cv-col :span="4" class="col"> col</cv-col>
+            <cv-col :span="4" class="col"> col</cv-col>
+            <cv-col :span="4" class="col"> col</cv-col>
+            <cv-col :span="4" class="col"> col</cv-col>
         </Row>
 
     </div>
@@ -24,7 +24,7 @@
 </script>
 
 <style lang="less">
-    @import "styles/index.less";
+    @import "cStyles/index.less";
 
     .col {
         border: solid #2db7f5 1px;

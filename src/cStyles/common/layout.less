@@ -1,4 +1,4 @@
-// 行的属性
+// 行的属性 cv-row
 .@{row-prefix-cls} {
     .make-row();
     display: block;
@@ -6,5 +6,65 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        &:before,
+        &:after {
+            display: flex;
+        }
+        // x轴原点
+        &-start {
+            justify-content: flex-start;
+        }
+        // x轴居中
+        &-center {
+            justify-content: center;
+        }
+        // x轴反向排序
+        &-end {
+            justify-content: flex-end;
+        }
+        // x轴平分
+        &-space-between {
+            justify-content: space-between;
+        }
+        // x轴x轴有间隔地平分
+        &-space-round {
+            justify-content: space-around;
+        }
+        // 顶部对齐
+        &-top {
+            align-items: flex-start;
+        }
+        // 居中对齐
+        &-middle {
+            align-items: center;
+        }
+        // 底部对齐
+        &-bottom {
+            align-items: flex-end;
+        }
     }
+;
+}
+
+// 申明col 为块级元素
+.@{col-prefix-cls} {
+    position: relative;
+    display: block;
+}
+
+.make-grid();
+// 额外的小网格
+.make-grid(-xs);
+// Small grid
+@media (min-width: @screen-sm-min) {
+    .make-grid(-sm);
+}
+// Medium grid
+@media (min-width: @screen-md-min) {
+    .make-grid(-md);
+}
+// Large grid
+@media (min-width: @screen-lg-min) {
+    .make-grid(-lg);
+    
 }

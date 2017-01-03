@@ -30,7 +30,7 @@
 		},
 		computed: {
 			gutter() {
-				return this.$parent.gutter;
+				return this.$parent.gutter || 0;
 			},
 			classes() {
 				let classList = [
