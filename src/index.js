@@ -8,6 +8,7 @@ import Button from './components/button';
 import Icon from './components/icon';
 import { Row, Col } from './components/layout';
 import Input from './components/input';
+import Radio from './components/radio';
 
 const cView = {
 	ButtonGroup: Button.Group,
@@ -15,7 +16,9 @@ const cView = {
 	cCol: Col,
 	Row,
 	Icon,
-	cInput: Input
+	cInput: Input,
+  Radio,
+  RadioGroup: Radio.Group,
 };
 
 const install = function (Vue) {
