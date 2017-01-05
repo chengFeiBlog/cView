@@ -1,9 +1,17 @@
 {
   "name": "c-view",
-  "version": "1.0.0",
-  "description": "A high quality  UI components Library with Vue.js",
+  "version": "1.0.1",
+  "title": "cView",
+  "description": "UI components Library with Vue2.0",
   "author": "chengfei",
-  "private": true,
+  "keywords": [
+    "vue2.0",
+    "vue.js",
+    "component",
+    "components",
+    "ui",
+    "framework"
+  ],
   "main": "dist/cview.min.js",
   "files": [
     "dist",
