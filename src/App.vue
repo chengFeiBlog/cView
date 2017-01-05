@@ -45,17 +45,59 @@
                 </Row>
             </c-col>
         </Row>
+        <Row>
+            <c-col>
+                <h1>四、输入组</h1>
+                <Row>
+                    <c-col :span="4">
+                        <c-input type="textarea"  @change="alert()" @enter="alert()" @focus="alert()" @blur="alert()" value="test" placeholder="请输入..."></c-input>
+                    </c-col>
+                    <c-col :span="4">
+                        <c-input type="textarea" @change="alert()" v-model="hello" :rows="4" placeholder="请输入..."></c-input>
+                    </c-col>
+                    <c-col :span="4">
+                        <c-input>
+                            <span slot="prepend">http://</span>
+                            <span slot="append">.com</span>
+                        </c-input>
+                    </c-col>
+                    <c-col :span="4">
+                        <c-input icon="ios-clock-outline" placeholder="请输入..." style="width: 200px"></c-input>
+                    </c-col>
+                </Row>
+            </c-col>
+        </Row>
     </div>
 </template>
 
 <script>
 	export default {
-		name: 'app'
+		name: 'app',
+		data(){
+			return {
+				test : 'sss',
+				hello: '222'
+            }
+		},
+        watch: {
+            test() {
+            	console.log(this.test);
+            },
+			hello() {
+				console.log(this.hello);
+            }
+        },
+        methods: {
+			alert(e) {
+				console.log('ssss');
+            }
+        }
 	}
 </script>
 
 <style lang="less">
     @import "../dist/styles/cview.css";
+
     .col {
         border: solid #2db7f5 1px;
     }

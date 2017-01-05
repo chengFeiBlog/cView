@@ -7,13 +7,15 @@ import 'core-js/fn/array/find-index';
 import Button from './components/button';
 import Icon from './components/icon';
 import { Row, Col } from './components/layout';
+import Input from './components/input';
 
 const cView = {
 	ButtonGroup: Button.Group,
 	cButton: Button,
 	cCol: Col,
 	Row,
-	Icon
+	Icon,
+	cInput: Input
 };
 
 const install = function (Vue) {
