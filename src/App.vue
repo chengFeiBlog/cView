@@ -18,8 +18,14 @@
             <c-col>
                 <h1>二、图标</h1>
                 <Row>
-                    <c-col>
+                    <c-col :span="2">
                         <Icon type="checkmark" size="20" color="red"></Icon>
+                    </c-col>
+                    <c-col :span="2">
+                        <Icon type="arrow-shrink" size="20" color="red"></Icon>
+                    </c-col>
+                    <c-col :span="2">
+                        <Icon type="checkmark-circled" size="20" color="red"></Icon>
                     </c-col>
                 </Row>
             </c-col>
@@ -29,9 +35,12 @@
                 <h1>三、按钮</h1>
                 <Row>
                     <c-col>
-                        <c-button type="default">默认按钮</c-button>
-                        <c-button type="primary">主要按钮</c-button>
-                        <c-button type="text">文字按钮</c-button>
+                        <c-button>Default</c-button>
+                        <c-button type="primary">primary</c-button>
+                        <c-button type="ghost">ghost</c-button>
+                        <c-button type="dashed">dashed</c-button>
+                        <c-button type="text">text</c-button>
+                        <c-button type="primary" shape="circle" icon="ios-search">搜索</c-button>
                     </c-col>
                 </Row>
             </c-col>
@@ -39,15 +48,14 @@
     </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
 	export default {
 		name: 'app'
 	}
 </script>
 
 <style lang="less">
-    @import "styles/index.less";
-
+    @import "../dist/styles/cview.css";
     .col {
         border: solid #2db7f5 1px;
     }

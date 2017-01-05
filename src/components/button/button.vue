@@ -69,7 +69,7 @@
 			}
 		},
 		mounted () {
-            this.showSlot = this.$refs.slot.innerHTML.replace(/\n/g, '').replace(/<!--[\w\W\r\n]*?-->/gmi, '') !== '';
+            this.showSlot = this.$refs.slot.innerHTML !== '';
 		}
 	}
 </script>

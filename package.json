@@ -4,18 +4,44 @@
   "description": "A high quality  UI components Library with Vue.js",
   "author": "chengfei",
   "private": true,
+  "main": "dist/cview.min.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
+    "dist:style": "gulp --gulpfile build/build-style.js",
+    "dist:prod": "webpack --config build/webpack.npm.prod.conf.js",
+    "dist": "npm run dist:style && npm run dist:prod  && npm run dev",
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chengFeiBlog/cView"
+  },
+  "author": "chengxiaofei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chengFeiBlog/cView/issues"
+  },
   "dependencies": {
+    "core-js": "^2.4.1",
+    "popper.js": "^0.6.4"
+  },
+  "peerDependencies": {
     "vue": "^2.1.0"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-less": "^3.1.0",
+    "gulp-rename": "^1.2.2",
     "core-js": "^2.4.1",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
