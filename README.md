@@ -13,13 +13,16 @@ Or using script tag for global use
 
 ```html
 <template>
-    <Slider :value.sync="value" range></Slider>
+    无双向绑定
+    <c-input value="value" range></c-input>
+    双向绑定
+    <c-input v-model="value" range></c-input>
 </template>
 <script>
     export default {
         data () {
             return {
-                value: [20, 50]
+                value: 'xxx'
             }
         }
     }

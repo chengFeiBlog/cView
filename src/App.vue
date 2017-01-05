@@ -50,10 +50,10 @@
                 <h1>四、输入组</h1>
                 <Row>
                     <c-col :span="4">
-                        <c-input type="textarea"  @change="alert()" @enter="alert()" @focus="alert()" @blur="alert()" value="test" placeholder="请输入..."></c-input>
+                        <c-input type="textarea"  @change="alert" @enter="alert()" @focus="alert()" @blur="alert()" value="test" placeholder="请输入..."></c-input>
                     </c-col>
                     <c-col :span="4">
-                        <c-input type="textarea" @change="alert()" v-model="hello" :rows="4" placeholder="请输入..."></c-input>
+                        <c-input type="textarea" @change="alert" v-model="hello" :rows="4" placeholder="请输入..."></c-input>
                     </c-col>
                     <c-col :span="4">
                         <c-input>
@@ -88,7 +88,7 @@
             }
         },
         methods: {
-			alert(e) {
+			alert() {
 				console.log('ssss');
             }
         }
