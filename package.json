@@ -16,6 +16,7 @@
     "vue": "^2.1.0"
   },
   "devDependencies": {
+    "core-js": "^2.4.1",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "autoprefixer": "^6.4.0",

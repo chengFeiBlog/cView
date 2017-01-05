@@ -1,30 +1,52 @@
 <template>
     <div id="app">
-        <h1>一栅格</h1>
-        <Row :gutter="20">
-            <cv-col :span="4" class="col"> col</cv-col>
-            <cv-col :span="4" class="col"> col</cv-col>
-            <cv-col :span="4" class="col"> col</cv-col>
-            <cv-col :span="4" class="col"> col</cv-col>
-            <cv-col :span="4" class="col"> col</cv-col>
-            <cv-col :span="4" class="col"> col</cv-col>
-        </Row>
+        <Row>
+            <c-col>
+                <h1>一、栅格</h1>
+                <Row :gutter="20">
+                    <c-col :span="4" class="col"> col</c-col>
+                    <c-col :span="4" class="col"> col</c-col>
+                    <c-col :span="4" class="col"> col</c-col>
+                    <c-col :span="4" class="col"> col</c-col>
+                    <c-col :span="4" class="col"> col</c-col>
+                    <c-col :span="4" class="col"> col</c-col>
+                </Row>
 
+            </c-col>
+        </Row>
+        <Row>
+            <c-col>
+                <h1>二、图标</h1>
+                <Row>
+                    <c-col>
+                        <Icon type="checkmark" size="20" color="red"></Icon>
+                    </c-col>
+                </Row>
+            </c-col>
+        </Row>
+        <Row>
+            <c-col>
+                <h1>三、按钮</h1>
+                <Row>
+                    <c-col>
+                        <c-button type="default">默认按钮</c-button>
+                        <c-button type="primary">主要按钮</c-button>
+                        <c-button type="text">文字按钮</c-button>
+                    </c-col>
+                </Row>
+            </c-col>
+        </Row>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
-	import {Row, CvCol} from './components/layout'
 	export default {
-		name: 'app',
-		components: {
-			Row, CvCol
-		}
+		name: 'app'
 	}
 </script>
 
 <style lang="less">
-    @import "cStyles/index.less";
+    @import "styles/index.less";
 
     .col {
         border: solid #2db7f5 1px;
