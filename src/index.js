@@ -9,6 +9,7 @@ import Icon from './components/icon';
 import { Row, Col } from './components/layout';
 import Input from './components/input';
 import Radio from './components/radio';
+import Upload from './components/upload';
 
 const cView = {
 	ButtonGroup: Button.Group,
@@ -19,6 +20,7 @@ const cView = {
 	cInput: Input,
   Radio,
   RadioGroup: Radio.Group,
+  cUpload : Upload
 };
 
 const install = function (Vue) {
